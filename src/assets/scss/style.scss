@@ -1,0 +1,59 @@
+$primaryColor: #09306c;
+
+header {
+  box-shadow: 0px -4px 10px #888888;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $primaryColor;
+  border-color: $primaryColor;
+
+
+  &:hover{
+    color: #fff;
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+  }
+}
+
+.navbar-light .navbar-brand, a {
+  color: $primaryColor !important;
+  font-weight: bold;
+}
+
+.hvr-underline-from-left:before {
+  background: $primaryColor !important;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.title {
+  font-size: 1.7em;
+  color: $primaryColor;
+}
+.text-container{
+  font-size: 1.2em ;
+}
+.navbar-brand-title {
+  font-size: 1.7em;
+  font-weight: bold;
+}
+label{
+  font-weight: bold;
+  color: $primaryColor;
+}
+small, label{
+  text-align: left;
+}
+.form-control:focus{border-color: $primaryColor;  box-shadow: none; -webkit-box-shadow: none;}
+.has-error .form-control:focus{box-shadow: none; -webkit-box-shadow: none;}
+html{
+  scroll-behavior: smooth;
+}
