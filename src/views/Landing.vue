@@ -23,8 +23,8 @@
               p Phasellus sed porttitor nibh. Suspendisse nunc enim, fringilla sit amet mauris at, malesuada hendrerit odio. consectetur nulla commodo ut. Fusce ornare dolor ut mi lobortis auctor. Morbi pharetra, sapien et pharetra
           b-col(md="6")
             b-img(
+              style="width:100%"
               rounded
-              center
               src="@/assets/images/quienessomos.jpg"
               alt="Responsive image"
             )
@@ -115,7 +115,7 @@
                 b-form-select-option ASCENDENTE
                 b-form-select-option DESCENDENTE
           b-col(md="12")
-            b-table(hover striped :items="measurements" style="background:white;")
+            b-table(hover responsive striped :items="measurements" style="background:white;")
 
     //Contact
     section#contacto.p-5
@@ -171,7 +171,7 @@
             .text-left.text-container
               p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis vehicula tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis vehicula tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis vehicula.
           b-col(md="12")
-            b-table(hover striped :items="documents.items" style="background:white;")
+            b-table(hover responsive striped :items="documents.items" style="background:white;")
               template(v-slot:head(title)="data")
                 strong Título
               template(v-slot:head(text)="data")
