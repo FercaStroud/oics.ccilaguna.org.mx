@@ -41,35 +41,89 @@
             b-tabs(content-class='mt-3' fill='')
               b-tab(title='Transparencia' active='')
                 b-table(responsive striped :items="measurements.transparency.items")
-                  template(#head(entry)="data")
-                    span.brand-color Rubro
-                  template(#head(question)="data")
-                    span.brand-color Pregunta
-                  template(#head(information_torreon)="data")
-                    span.brand-color Información Municipio (Torreón)
-                  template(#head(information_matamoros)="data")
-                    span.brand-color Información Municipio (Matamoros)
-                  template(#head(information_saltillo)="data")
-                    span.brand-color Información Municipio (Saltillo)
-                  template(#head(rate_torreon)="data")
-                    span.brand-color Codificación Municipio (Torreón)
-                  template(#head(rate_matamoros)="data")
-                    span.brand-color Codificación Municipio (Matamoros)
-                  template(#head(rate_saltillo)="data")
-                    span.brand-color Codificación Municipio (Saltillo)
-                  template(#head(score_torreon)="data")
-                    span.brand-color Calificación Rubro (Torreón)
-                  template(#head(score_matamoros)="data")
-                    span.brand-color Calificación Rubro (Matamoros)
-                  template(#head(score_saltillo)="data")
-                    span.brand-color Calificación Rubro (Saltillo)
+                  template(#thead-top="data")
+                    b-tr
+                    b-th()
+                    b-th()
+                    b-th(colspan="3" variant="warning") Información Municipio
+                    b-th(colspan="3" variant="success") Codificación Municipio
+                    b-th(colspan="3" variant="primary") Calificación Municipio
 
+                  template(#head(entry)="data")
+                    .table-info Rubro
+                  template(#head(question)="data")
+                    .table-danger Pregunta
+                  template(#head(information_torreon)="data")
+                    .table-warning Torreón
+                  template(#head(information_matamoros)="data")
+                    .table-warning Matamoros
+                  template(#head(information_saltillo)="data")
+                    .table-warning Saltillo
+                  template(#head(rate_torreon)="data")
+                    .table-success Torreón
+                  template(#head(rate_matamoros)="data")
+                    .table-success Matamoros
+                  template(#head(rate_saltillo)="data")
+                    .table-success Saltillo
+                  template(#head(score_torreon)="data")
+                    .table-primary Torreón
+                  template(#head(score_matamoros)="data")
+                    .table-primary Matamoros
+                  template(#head(score_saltillo)="data")
+                    .table-primary Saltillo
+
+                  template(#cell(information_torreon)="data")
+                    div(v-if="data.value === 'links_torreon'")
+                      a(target="_blank" href="http://www.torreon.gob.mx/transparencia/") Transparencia
+                      br/
+                      a(target="_blank" href="http://www.torreon.gob.mx/contraloria/") Contraloría
+                    span(v-else) {{data.value}}
               b-tab(title='Participación Ciudadana')
-                p I&apos;m the second tab
+                b-table(responsive striped :items="measurements.participation.items")
+                  template(#thead-top="data")
+                    b-tr
+                    b-th()
+                    b-th()
+                    b-th(colspan="3" variant="warning") Información Municipio
+                    b-th(colspan="3" variant="success") Codificación Municipio
+                    b-th(colspan="3" variant="primary") Calificación Municipio
+
+                  template(#head(entry)="data")
+                    .table-info Rubro
+                  template(#head(question)="data")
+                    .table-danger Pregunta
+                  template(#head(information_torreon)="data")
+                    .table-warning Torreón
+                  template(#head(information_matamoros)="data")
+                    .table-warning Matamoros
+                  template(#head(information_saltillo)="data")
+                    .table-warning Saltillo
+                  template(#head(rate_torreon)="data")
+                    .table-success Torreón
+                  template(#head(rate_matamoros)="data")
+                    .table-success Matamoros
+                  template(#head(rate_saltillo)="data")
+                    .table-success Saltillo
+                  template(#head(score_torreon)="data")
+                    .table-primary Torreón
+                  template(#head(score_matamoros)="data")
+                    .table-primary Matamoros
+                  template(#head(score_saltillo)="data")
+                    .table-primary Saltillo
+
+                  template(#cell(information_torreon)="data")
+                    div(v-if="data.value === 'mail'")
+                      a(target="_blank" href="mailto:denuncia.contraloria.trc@torreon.gob.mx") E-Mail
+                    span(v-else) {{data.value}}
+
+                  template(#cell(information_matamoros)="data")
+                    div(v-if="data.value === 'page'")
+                      a(target="_blank" href="https://www.matamoroscoahuila.gob.mx/transparencia/quejas.php") Quejas
+                    span(v-else) {{data.value}}
+
               b-tab(title='Rendición de Cuentas')
-                p I&apos;m the tab with the very, very long title
               b-tab(title='Rendimiento')
-                p I&apos;m the tab with the very, very long title
+                p SIN DATOS
 
 
         //b-row(align-v="center" style="background: darkslategray; border-radius:10px; margin-bottom:50px")
@@ -241,12 +295,12 @@ export default {
   data: function () {
     return {
       measurements: {
-          transparency:{
-            items:[
+        transparency:{
+          items:[
               {
                 entry: 'Sitio Web',
-                question: "Pregunta",
-                information_torreon: "http://www.torreon.gob.mx/transparencia/ y http://www.torreon.gob.mx/contraloria",
+                question: "Enlace / URL",
+                information_torreon: "links_torreon",
                 information_matamoros: "No cuenta con micrositio",
                 information_saltillo: "",
                 rate_torreon: 10,
@@ -256,8 +310,519 @@ export default {
                 score_matamoros: "",
                 score_saltillo: "",
               },
+              {
+                entry: 'Sitio Web',
+                question: "Actualización de medios digitales",
+                information_torreon: "Trimestral",
+                information_matamoros: "Semanal",
+                information_saltillo: "",
+                rate_torreon: 10,
+                rate_matamoros: 10,
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Sitio Web',
+                question: "Información por secciones, vinculos o pestañas / Motores de busqueda",
+                information_torreon: "Sí",
+                information_matamoros: "No",
+                information_saltillo: "",
+                rate_torreon: 10,
+                rate_matamoros: 0,
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Sitio Web',
+                question: "Motores de búsqueda",
+                information_torreon: "Sí",
+                information_matamoros: "No",
+                information_saltillo: "",
+                rate_torreon: 10,
+                rate_matamoros: 0,
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Sitio Web',
+                question: "Enlaces hacía sitios de intéres",
+                information_torreon: "Sí",
+                information_matamoros: "No",
+                information_saltillo: "",
+                rate_torreon: 10,
+                rate_matamoros: 0,
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Sitio Web',
+                question: "Instrumentos de intercambio con la ciudadanía",
+                information_torreon: "Sí",
+                information_matamoros: "No",
+                information_saltillo: "",
+                rate_torreon: 10,
+                rate_matamoros: 0,
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Sitio Web',
+                question: "Documentos de auditoría",
+                information_torreon: "No",
+                information_matamoros: "No",
+                information_saltillo: "",
+                rate_torreon: 0,
+                rate_matamoros: 0,
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Sitio Web',
+                question: "Información institucional",
+                information_torreon: "Sí",
+                information_matamoros: "Sí",
+                information_saltillo: "",
+                rate_torreon: 10,
+                rate_matamoros: 10,
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Sitio Web',
+                question: "Documentos de gestión",
+                information_torreon: "Sí",
+                information_matamoros: "Sí",
+                information_saltillo: "",
+                rate_torreon: 10,
+                rate_matamoros: 10,
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Sitio Web',
+                question: "Descarga de contenido",
+                information_torreon: "Sí",
+                information_matamoros: "No",
+                information_saltillo: "",
+                rate_torreon: 10,
+                rate_matamoros: 0,
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Disponibilidad y Calidad de la Información Relevante',
+                question: "Reglamento interior descargable",
+                information_torreon: "Sí",
+                information_matamoros: 0,
+                information_saltillo: "",
+                rate_torreon: 10,
+                rate_matamoros: 10,
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Disponibilidad y Calidad de la Información Relevante',
+                question: "Organigrama de la contraloría",
+                information_torreon: "Sí",
+                information_matamoros: "Sí",
+                information_saltillo: "",
+                rate_torreon: 10,
+                rate_matamoros: 10,
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Disponibilidad y Calidad de la Información Relevante',
+                question: "Actividades de la contraloría",
+                information_torreon: "Sí",
+                information_matamoros: 0,
+                information_saltillo: "",
+                rate_torreon: 10,
+                rate_matamoros: 10,
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Disponibilidad y Calidad de la Información Relevante',
+                question: "Contiene el cronograma de auditorías",
+                information_torreon: "",
+                information_matamoros: "",
+                information_saltillo: "",
+                rate_torreon: "",
+                rate_matamoros: "",
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Disponibilidad y Calidad de la Información Relevante',
+                question: "Informes de las auditorías aplicadas por la contraloría",
+                information_torreon: "",
+                information_matamoros: "",
+                information_saltillo: "",
+                rate_torreon: "",
+                rate_matamoros: "",
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Disponibilidad y Calidad de la Información Relevante',
+                question: "Descarga los informes de auditoría",
+                information_torreon: "",
+                information_matamoros: "",
+                information_saltillo: "",
+                rate_torreon: "",
+                rate_matamoros: "",
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Disponibilidad y Calidad de la Información Relevante',
+                question: "Presupuesto asignado a la contraloría",
+                information_torreon: "",
+                information_matamoros: "",
+                information_saltillo: "",
+                rate_torreon: "",
+                rate_matamoros: "",
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Disponibilidad y Calidad de la Información Relevante',
+                question: "Desglosa los bienes y/o servicios contratados por la contraloría",
+                information_torreon: "",
+                information_matamoros: "",
+                information_saltillo: "",
+                rate_torreon: "",
+                rate_matamoros: "",
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
+              {
+                entry: 'Disponibilidad y Calidad de la Información Relevante',
+                question: "Descarga la información de servicios",
+                information_torreon: "",
+                information_matamoros: "",
+                information_saltillo: "",
+                rate_torreon: "",
+                rate_matamoros: "",
+                rate_saltillo: "",
+                score_torreon: "",
+                score_matamoros: "",
+                score_saltillo: "",
+              },
             ]
-          },
+        },
+        participation:{
+          items:[
+            {
+              entry: 'Quejas y denuncias',
+              question: "Quejas/denuncias en el portal del OIC",
+              information_torreon: "Trimestral",
+              information_matamoros: "No contestó",
+              information_saltillo: "",
+              rate_torreon: 10,
+              rate_matamoros: 0,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Quejas y denuncias',
+              question: "Unidad de Atención para quejas/denuncias",
+              information_torreon: "Sí",
+              information_matamoros: "Sí",
+              information_saltillo: "",
+              rate_torreon: 10,
+              rate_matamoros: 10,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Quejas y denuncias',
+              question: "Intervenciónn directa o indirecta de sociedad civil en auditorias",
+              information_torreon: "No",
+              information_matamoros: "No",
+              information_saltillo: "",
+              rate_torreon: 0,
+              rate_matamoros: 0,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Quejas y denuncias',
+              question: "Intervenciónn directa o indirecta de sociedad civil en auditorias",
+              information_torreon: 4,
+              information_matamoros: 3,
+              information_saltillo: "",
+              rate_torreon: 10,
+              rate_matamoros: 7.5,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Quejas y denuncias',
+              question: "Buzón de quejas /denuncia",
+              information_torreon: "mail",
+              information_matamoros: "page",
+              information_saltillo: "",
+              rate_torreon: 10,
+              rate_matamoros: 10,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Lineamientos del Sistema Estatal Anticorrupción',
+              question: "Intercambio de informacion entre el SEA y el OIC",
+              information_torreon: "Otro",
+              information_matamoros: "No contestó",
+              information_saltillo: "",
+              rate_torreon: 5,
+              rate_matamoros: 0,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Lineamientos del Sistema Estatal Anticorrupción',
+              question: "SEA ha notificado al OIC sobre lineamientos emitidos",
+              information_torreon: "No",
+              information_matamoros: "Sí",
+              information_saltillo: "",
+              rate_torreon: 0,
+              rate_matamoros: 10,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Lineamientos del Sistema Estatal Anticorrupción',
+              question: "Marco legal esta homogolado con las reformas federales",
+              information_torreon: 4,
+              information_matamoros: 3,
+              information_saltillo: "",
+              rate_torreon: 10,
+              rate_matamoros: 7.5,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Perfil Contralor',
+              question: "Marco legal para designar al contralor esta homogolado con las reformas federales",
+              information_torreon: 2,
+              information_matamoros: 1,
+              information_saltillo: "",
+              rate_torreon: 5,
+              rate_matamoros: 2.5,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Perfil Contralor',
+              question: "Homogeneidad en la designación para ser contalor con el Codigo Municipal y Reglamento Interior",
+              information_torreon: "No",
+              information_matamoros: "Sí",
+              information_saltillo: "",
+              rate_torreon: 0,
+              rate_matamoros: 10,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Perfil Contralor',
+              question: "Forma de designación del OIC",
+              information_torreon: "Otra",
+              information_matamoros: "Otra",
+              information_saltillo: "",
+              rate_torreon: 5,
+              rate_matamoros: 5,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Perfil Contralor',
+              question: "Evaluaciones del contralor están publicadas en la pagina oficial",
+              information_torreon: 2,
+              information_matamoros: 1,
+              information_saltillo: "",
+              rate_torreon: 10,
+              rate_matamoros: 10,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Convocatoria pública al cargo de contralor',
+              question: "Marco legal para emitir la convocatoria pública para designar al contralor esta homogolado con las reformas federales",
+              information_torreon: 1,
+              information_matamoros: 1,
+              information_saltillo: "",
+              rate_torreon: 5,
+              rate_matamoros: 5,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Convocatoria pública al cargo de contralor',
+              question: "Existen lineamientos para emitir y llevar a cabo la convocatoria pública al cargo de contralor",
+              information_torreon: "Sí",
+              information_matamoros: "Sí",
+              information_saltillo: "",
+              rate_torreon: 10,
+              rate_matamoros: 10,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Convocatoria pública al cargo de contralor',
+              question: "Plataforma digital para emitir la convocatoria pública al cargo de contralor",
+              information_torreon: "No",
+              information_matamoros: "Sí",
+              information_saltillo: "",
+              rate_torreon: 0,
+              rate_matamoros: 10,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Convocatoria pública al cargo de contralor',
+              question: "Intervención directa de la ciudadanía con voz y voto en ",
+              information_torreon: 0,
+              information_matamoros: 1,
+              information_saltillo: "",
+              rate_torreon: 0,
+              rate_matamoros: 5,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Contraloría Social',
+              question: "Participación ciudadana en la Contraloría Municipal",
+              information_torreon: "Sí",
+              information_matamoros: "No",
+              information_saltillo: "",
+              rate_torreon: 10,
+              rate_matamoros: 0,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Contraloría Social',
+              question: "Mecanismo de participación ciudadana en la Contraloría Municipal",
+              information_torreon: "Reuniones de evaluación de las obras realizadas en éscuelas de educacion primaria, por medio de un programa social ya sea de fondos municipales, estatales o federales.",
+              information_matamoros: "Comité de contraloría social",
+              information_saltillo: "",
+              rate_torreon: 10,
+              rate_matamoros: 10,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Contraloría Social',
+              question: "Normatividad para regular la participacion ciudadana en la Contraloria Social",
+              information_torreon: "Sí",
+              information_matamoros: "No",
+              information_saltillo: "",
+              rate_torreon: 10,
+              rate_matamoros: 0,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Contraloría Social',
+              question: "Normatividad que regula la participación ciudadana en la Contraloría Social",
+              information_torreon: "Ley de desarrollo social art 6",
+              information_matamoros: "Ley de desarrollo social art 6",
+              information_saltillo: "",
+              rate_torreon: 10,
+              rate_matamoros: 10,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+            {
+              entry: 'Contraloría Social',
+              question: "Participación ciudadana",
+              information_torreon: 1,
+              information_matamoros: 1,
+              information_saltillo: "",
+              rate_torreon: 5,
+              rate_matamoros: 5,
+              rate_saltillo: "",
+              score_torreon: "",
+              score_matamoros: "",
+              score_saltillo: "",
+            },
+          ]
+        }
       },
       documents: {
         items: [
