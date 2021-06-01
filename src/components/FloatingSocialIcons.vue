@@ -20,14 +20,14 @@ export default {
         {
           src: ['fab', 'facebook'],
           title: 'Facebook',
-          href: '#'
+          href: 'https://www.facebook.com/CCILagunaAc/'
         },
         {
           src: ['fab', 'twitter'],
           title: 'Twitter',
-          href: '#'
+          href: 'https://twitter.com/CCILagunaAC'
         },
-        {
+        /*{
           src: ['fab', 'instagram'],
           title: 'Instagram',
           href: '#'
@@ -36,7 +36,7 @@ export default {
           src: ['fab', 'youtube'],
           title: 'YouTube',
           href: '#'
-        }
+        }*/
       ]
     }
   },

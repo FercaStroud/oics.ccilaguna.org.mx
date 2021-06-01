@@ -54,6 +54,9 @@ small, label{
 }
 .form-control:focus{border-color: $primaryColor;  box-shadow: none; -webkit-box-shadow: none;}
 .has-error .form-control:focus{box-shadow: none; -webkit-box-shadow: none;}
-html{
+html {
   scroll-behavior: smooth;
+}
+.brand-color {
+  color: $primaryColor;
 }
