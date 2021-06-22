@@ -3,8 +3,9 @@
     Navigator
     router-view
     FloatingSocialIcons
-
-    .container(style="height:60px;")
+    section#privacy.p-5
+      .container
+        a(href="#") Aviso de Privacidad
 </template>
 
 <style lang="scss">

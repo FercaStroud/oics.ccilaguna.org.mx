@@ -9,8 +9,8 @@
           b-navbar-nav.ml-auto
             b-nav-item.hvr-underline-from-left(href='#quienes') ¿Quiénes somos?
             b-nav-item.hvr-underline-from-left(href='#mediciones') Mediciones
-            b-nav-item.hvr-underline-from-left(href='#contacto') Contacto
             b-nav-item.hvr-underline-from-left(href='#documentos') Documentos
+            b-nav-item.hvr-underline-from-left(href='#contacto') Contacto
 
 </template>
 
