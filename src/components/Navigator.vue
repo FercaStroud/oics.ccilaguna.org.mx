@@ -1,8 +1,8 @@
 <template lang="pug">
   header
-    b-navbar(toggleable='lg' type='light' fixed="top" style="background:white")
-      .container-fluid
-        b-navbar-brand.navbar-brand-title(href='#' tag="h1" class="mb-0")  Tablero de Evaluación y Seguimiento
+    b-navbar(toggleable='lg' type='light' fixed="top" style="background:white;")
+      .container-fluid()
+        b-navbar-brand.navbar-brand-title(href='#' tag="h1" style=" line-height: 36px !important;" )  Tablero de Evaluación y Seguimiento
           .small(style="font-size:.5em;margin-top:-10px; text-align:left") de los Órganos Internos de Control Municipal del Estado de Coahuila
         b-navbar-toggle(target='nav-collapse')
         b-collapse#nav-collapse(is-nav='')

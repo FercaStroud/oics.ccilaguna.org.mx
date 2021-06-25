@@ -86,13 +86,15 @@
                 v-if="filters.torreon"
                 :icon="['fas', 'toggle-on']"
                 style="color:#004786;margin-right:5px"
+                @click="handlerCity('torreon', filters.torreon)"
               )
               font-awesome-icon(
                 v-else
+                @click="handlerCity('torreon', filters.torreon)"
                 :icon="['fas', 'toggle-off']"
                 style="color:#acacac;margin-right:5px"
               )
-              strong(style="font-size:1.2em;") Torreón
+              strong(@click="handlerCity('torreon', filters.torreon)" style="font-size:1.2em;") Torreón
 
           b-col(sm="12" md="4")
             img(
@@ -103,16 +105,18 @@
             .score-container(style="color: #ff34b0") {{ selectedEntry.score_matamoros }}
             .municipality-container(style="color: #004786")
               font-awesome-icon(
+                @click="handlerCity('matamoros', filters.matamoros)"
                 v-if="filters.matamoros"
                 :icon="['fas', 'toggle-on']"
                 style="color:#004786;margin-right:5px"
               )
               font-awesome-icon(
                 v-else
+                @click="handlerCity('matamoros', filters.matamoros)"
                 :icon="['fas', 'toggle-off']"
                 style="color:#acacac;margin-right:5px"
               )
-              strong(style="font-size:1.2em;") Matamoros
+              strong(@click="handlerCity('matamoros', filters.matamoros)" style="font-size:1.2em;") Matamoros
 
           b-col(sm="12" md="4")
             img(
@@ -123,16 +127,18 @@
             .score-container(style="color: #004786") {{ selectedEntry.score_saltillo }}
             .municipality-container(style="color: #004786")
               font-awesome-icon(
+                @click="handlerCity('saltillo', filters.saltillo)"
                 v-if="filters.saltillo"
                 :icon="['fas', 'toggle-on']"
                 style="color:#004786;margin-right:5px"
               )
               font-awesome-icon(
                 v-else
+                @click="handlerCity('saltillo', filters.saltillo)"
                 :icon="['fas', 'toggle-off']"
                 style="color:#acacac;margin-right:5px"
               )
-              strong(style="font-size:1.2em;") Saltillo
+              strong(@click="handlerCity('saltillo', filters.saltillo)" style="font-size:1.2em;") Saltillo
 
 
         b-row(align-v="center" style="margin-top:20px")
