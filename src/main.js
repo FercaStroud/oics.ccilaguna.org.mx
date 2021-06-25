@@ -11,12 +11,16 @@ import 'hover.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faToggleOff, faToggleOn, faEyeSlash, faEye } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
 library.add(fab)
 library.add(faCheck)
-library.add(faTimes)
+library.add(faToggleOff)
+library.add(faToggleOn)
+library.add(faEyeSlash)
+library.add(faEye)
+
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false

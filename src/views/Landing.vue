@@ -12,9 +12,10 @@
         b-row(align-v="center")
           b-col(md="8")
             .text-left(style="margin-bottom:10px")
-              strong.title ¿Quiénes somos?
+              strong.title Proyecto
             .text-left.text-container
-              p Buscamos mejorar y optimizar la información generada por los órganos internos de control municipal, así como dar a conocer dicha información de una manera organizada a la ciudadanía en general.
+              p(style="text-align:justify") El Tablero de Evaluación y Seguimiento de los Órganos Internos de Control Municipal del Estado de Coahuila es un modelo dinámico que evalúa el desempeño de los OICs en el ámbito municipal, en la primera etapa contempla los municipios de Saltillo , Torreón , Matamoros a través del monitoreo de 95 indicadores agrupados en 4 ejes temáticos.
+
           b-col(md="4")
             b-img(
               style="width:100%"
@@ -22,13 +23,51 @@
               src="@/assets/images/quienessomos.jpg"
               alt="Responsive image"
             )
+        b-row(align-v="center")
+          b-col(md="12")
+            strong.title Ejes evaluados:
+          b-col(md="12")
+            .accordion(role='tablist')
+              b-card.mb-1(no-body='')
+                b-card-header.p-1(header-tag='header' role='tab')
+                  b-button(block='' v-b-toggle.accordion-1='' type="dark" style="background-color:#09306c") TRANSPARENCIA Y ACCESO A LA INFORMACIÓN
+                b-collapse#accordion-1(visible='' accordion='my-accordion' role='tabpanel')
+                  b-card-body
+                    .text-left.text-container
+                      p(style="text-align:justify") Construir un buen gobierno implica la apertura de su actuación al escrutinio público a través de mecanismos que garanticen a los ciudadanos accesibilidad total al ejercicio de la función pública e impulsen esquemas de corresponsabilidad en la elaboración de políticas públicas encaminadas a la formación de una conducta ética en el funcionamiento administrativo, transparencia en la asignación y el manejo de recursos públicos, así como la rendición de cuentas de acuerdo a las metas establecidas en el corto,mediano y largo plazos.
+                      p(style="text-align:justify") La TRANSPARENCIA hace referencia a la disponibilidad de información a través de la cual el OIC hace visibles y accesibles -de manera suficiente, oportuna, clara y adecuada susacciones,políticas, procedimientos y decisiones.
+              b-card.mb-1(no-body='')
+                b-card-header.p-1(header-tag='header' role='tab')
+                  b-button(block='' v-b-toggle.accordion-2='' type="dark" style="background-color:#09306c") PARTICIPACIÓN CIUDADANA:
+                b-collapse#accordion-2(accordion='my-accordion' role='tabpanel')
+                  b-card-body
+                    .text-left.text-container
+                      p(style="text-align:justify") Se refiere a la dimensión de apertura del OIC para incorporarmecanismos e instancias de cooperación y de articulación que faciliten elejercicio de un controlactivo por parte de los ciudadanos y organizaciones de la sociedad civil. Es imprescindiblegarantizar la participación activa de la ciudadanía a fin de perfeccionar la calidad del control, y su involucramiento coadyuva a una mayor cultura de transparencia gubernamental.
+              b-card.mb-1(no-body='')
+                b-card-header.p-1(header-tag='header' role='tab')
+                  b-button(block='' v-b-toggle.accordion-3='' type="dark" style="background-color:#09306c") RENDICIÓN DE CUENTAS
+                b-collapse#accordion-3(accordion='my-accordion' role='tabpanel')
+                  b-card-body
+                    .text-left.text-container
+                      p(style="text-align:justify") Se refiere a los ejercicios mediante los cuales el OIC se responsabiliza de su accionar frente a la ciudadanía -principal beneficiaria de la tarea de control,a través de dispositivos institucionales que permiten dar a conocer intensamente losprocedimientosy actividades que desempeña.En particular, la rendición de cuentas comprende la existencia de prácticas y mecanismos através de los cuales la entidades activamente transparente respecto de su funcionamiento interno,iniciando procedimientos de comunicación con el público y difundiendo ampliamente sus procesos y resultados.
+              b-card.mb-1(no-body='')
+                b-card-header.p-1(header-tag='header' role='tab')
+                  b-button(block='' v-b-toggle.accordion-4='' type="dark" style="background-color:#09306c") RENDIMIENTO
+                b-collapse#accordion-4(accordion='my-accordion' role='tabpanel')
+                  b-card-body
+                    .text-left.text-container
+                      p(style="text-align:justify") Se refiere al desempeño del OIC respecto de las facultades y funciones quele competen, así como la operatividad en los procedimientos que lleva a cabo. El rendimiento comprendeel funcionamiento mismo de la institución. Contempla la existencia de prácticas y mecanismos de gestión, y examina los procedimientos que permiten garantizar una labor de control imparcial y efectiva que maximice un desempeño integral sólido.
 
+        b-row(align-v="center")
+          b-col(md="12")
+            .text-left.text-container
+              p La independencia de la entidad resulta una precondición para alcanzar sus objetivos y misión,pues de ello se deriva el nivel de autonomía del que dispondrá para administrar su labor y desarrollar sus funciones.
     section#mediciones.p-5(style="background: ghostwhite")
       .container
         b-row(align-v="center")
           b-col(md="12")
             .text-left(style="margin-bottom:10px")
-              strong.title Mediciones en Coahuila
+              strong.title Indicadores por Municipio
             .text-left.text-container
               //p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis vehicula tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis vehicula tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis vehicula.
         b-row(align-v="center")
@@ -42,17 +81,19 @@
             )
             .score-title(v-if="selectedEntry !== ''" style="color: #004786") Calificación por Rubro
             .score-container(style="color: #00aed2") {{ selectedEntry.score_torreon }}
-            font-awesome-icon(
-              v-if="filters.torreon"
-              :icon="['fas', 'check']"
-              style="color:green;margin-right:5px"
-            )
-            font-awesome-icon(
-              v-else
-              :icon="['fas', 'times']"
-              style="color:red;margin-right:5px"
-            )
-            strong Torreón
+            .municipality-container(style="color: #004786")
+              font-awesome-icon(
+                v-if="filters.torreon"
+                :icon="['fas', 'toggle-on']"
+                style="color:#004786;margin-right:5px"
+              )
+              font-awesome-icon(
+                v-else
+                :icon="['fas', 'toggle-off']"
+                style="color:#acacac;margin-right:5px"
+              )
+              strong(style="font-size:1.2em;") Torreón
+
           b-col(sm="12" md="4")
             img(
               @click="handlerCity('matamoros', filters.matamoros)"
@@ -60,17 +101,19 @@
             )
             .score-title(v-if="selectedEntry !== ''" style="color: #004786") Calificación por Rubro
             .score-container(style="color: #ff34b0") {{ selectedEntry.score_matamoros }}
-            font-awesome-icon(
-              v-if="filters.matamoros"
-              :icon="['fas', 'check']"
-              style="color:green;margin-right:5px"
-            )
-            font-awesome-icon(
-              v-else
-              :icon="['fas', 'times']"
-              style="color:red;margin-right:5px"
-            )
-            strong Matamoros
+            .municipality-container(style="color: #004786")
+              font-awesome-icon(
+                v-if="filters.matamoros"
+                :icon="['fas', 'toggle-on']"
+                style="color:#004786;margin-right:5px"
+              )
+              font-awesome-icon(
+                v-else
+                :icon="['fas', 'toggle-off']"
+                style="color:#acacac;margin-right:5px"
+              )
+              strong(style="font-size:1.2em;") Matamoros
+
           b-col(sm="12" md="4")
             img(
               @click="handlerCity('saltillo', filters.saltillo)"
@@ -78,17 +121,20 @@
             )
             .score-title(v-if="selectedEntry !== ''" style="color: #004786") Calificación por Rubro
             .score-container(style="color: #004786") {{ selectedEntry.score_saltillo }}
-            font-awesome-icon(
-              v-if="filters.saltillo"
-              :icon="['fas', 'check']"
-              style="color:green;margin-right:5px"
-            )
-            font-awesome-icon(
-              v-else
-              :icon="['fas', 'times']"
-              style="color:red;margin-right:5px"
-            )
-            strong Saltillo
+            .municipality-container(style="color: #004786")
+              font-awesome-icon(
+                v-if="filters.saltillo"
+                :icon="['fas', 'toggle-on']"
+                style="color:#004786;margin-right:5px"
+              )
+              font-awesome-icon(
+                v-else
+                :icon="['fas', 'toggle-off']"
+                style="color:#acacac;margin-right:5px"
+              )
+              strong(style="font-size:1.2em;") Saltillo
+
+
         b-row(align-v="center" style="margin-top:20px")
           b-col(md="12")
             div(style="text-align: left;:left; width:100%;margin-top:10px") Eje
@@ -134,85 +180,6 @@
 
         b-row(v-if="!filters.torreon && !filters.matamoros && !filters.saltillo" align-v="center" style="margin-top:20px")
           strong.text-danger Seleccione un municipio para visualizar datos.
-        b-row(v-else align-v="center" style="margin-top:20px; display:none")
-          b-table(responsive striped :items="measurements.transparency.items")
-            template(#thead-top="data")
-              b-tr
-              b-th()
-              b-th()
-              b-th(colspan="3" variant="")
-                span(style="display:none")
-              b-th(colspan="3" variant="")
-                span(style="display:none")
-              b-th(colspan="3" variant="")
-                span(style="display:none") {{ data.value }}
-
-            template(#head(entry)="data")
-              .table-info(style="display:none") Rubro
-            template(#head(question)="data")
-              strong Indicador
-            template(#head(information_torreon)="data")
-              .table-warning(v-if="!filters.torreon" style="display:none") Torreón
-              strong(v-else style="color: #00aed2") Torreón
-            template(#head(information_matamoros)="data")
-              .table-warning(v-if="!filters.matamoros" style="display:none") Matamoros
-              strong(v-else style="color: #ff34b0") Matamoros
-            template(#head(information_saltillo)="data")
-              .table-warning(v-if="!filters.saltillo" style="display:none") Saltillo
-              strong(v-else style="color: #004786") Saltillo
-            template(#head(rate_torreon)="data")
-              .table-warning(v-if="!filters.torreon" style="display:none") Torreón
-              strong(v-else style="color: #00aed2") Torreón
-            template(#head(rate_matamoros)="data")
-              .table-warning(v-if="!filters.matamoros" style="display:none") Matamoros
-              strong(v-else style="color: #ff34b0") Matamoros
-            template(#head(rate_saltillo)="data")
-              .table-warning(v-if="!filters.saltillo" style="display:none") Saltillo
-              strong(v-else style="color: #004786") Saltillo
-
-            template(#head(score_torreon)="data")
-              span(style="display:none") {{ data.value }}
-            template(#head(score_matamoros)="data")
-              span(style="display:none") {{ data.value }}
-            template(#head(score_saltillo)="data")
-              span(style="display:none") {{ data.value }}
-
-            template(#cell(entry)="data")
-              span(style="display:none") {{ data.value }}
-
-            template(#cell(score_torreon)="data")
-              span(style="display:none") {{ data.value }}
-            template(#cell(score_matamoros)="data")
-              span(style="display:none") {{ data.value }}
-            template(#cell(score_saltillo)="data")
-              span(style="display:none") {{ data.value }}
-
-
-            template(#cell(rate_torreon)="data")
-              span(v-if="!filters.torreon" style="display:none") {{ data.value }}
-              span(v-else) {{ data.value }}
-            template(#cell(rate_matamoros)="data")
-              span(v-if="!filters.matamoros" style="display:none") {{ data.value }}
-              span(v-else) {{ data.value }}
-            template(#cell(rate_saltillo)="data")
-              span(v-if="!filters.saltillo" style="display:none") {{ data.value }}
-              span(v-else) {{ data.value }}
-
-            template(#cell(information_matamoros)="data")
-              span(v-if="!filters.matamoros" style="display:none") {{ data.value }}
-              span(v-else) {{ data.value }}
-            template(#cell(information_saltillo)="data")
-              span(v-if="!filters.saltillo" style="display:none") {{ data.value }}
-              span(v-else) {{ data.value }}
-            template(#cell(information_torreon)="data")
-              div(v-if="data.value === 'links_torreon' && filters.torreon")
-                a(target="_blank" href="http://www.torreon.gob.mx/transparencia/") Transparencia
-                br/
-                a(target="_blank" href="http://www.torreon.gob.mx/contraloria/") Contraloría
-              span(v-if="data.value !== 'links_torreon' && filters.torreon") {{data.value}}
-              span(v-if="!filters.torreon" style="display:none") {{data.value}}
-
-
         b-row(align-v="center" style="margin-top:20px")
           b-col(sm="12" md="6")
             strong {{ selectedMeasurement.title }}
@@ -222,7 +189,11 @@
             strong {{ selectedQuestion.title }}
             p {{ selectedQuestion.description }}
           b-col(sm="12" md="6")
-            bar-chart
+            bar-chart(
+              :rates="rates"
+              :labels="labels"
+              v-if="barChart"
+            )
 
     //Documents
     section#documentos.p-5(style="background: ghostwhite")
@@ -259,7 +230,7 @@
     section#contacto.p-5
       .container
         b-row(align-v="center" )
-          b-col(md="6")
+          b-col(md="12")
             .text-left(style="margin-bottom:10px")
               strong.title Contacto
             .text-left.text-container
@@ -292,18 +263,8 @@
                   required
                 )
             b-button(block variant="primary" ) Enviar
-          b-col(md="6")
-            .google-map
-              iframe(
-                frameborder="0"
-                style="border:0;height: 410px;width:100%"
-                src="https://www.google.com/maps/embed/v1/place?q=Bosque%20Venustiano%20Carranza&key=AIzaSyCZI5F_k6S1k46ujh0SNrapM89f7mJxd30"
-                allowfullscreen
-              )
-
-
     //patreons
-    section#patrocinadores.p-5
+    section#patrocinadores.p-5(style="background-color: #f7f7f7;")
       .container
         b-row(align-v="center" )
           b-col(md="6")
@@ -312,12 +273,19 @@
             .text-left.text-container
               //p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis vehicula tortor.
         b-row(align-v="center" )
-          b-col(md="4" offset-md="4")
+          b-col(md="4" )
             b-img(
               fluid
               center
               src="@/assets/images/logo.png"
-              alt="Responsive image"
+              alt="OICS"
+            )
+          b-col(md="4" offset-md="4")
+            b-img(
+              fluid
+              center
+              src="@/assets/images/consejo.jpeg"
+              alt="Consejo Cívico"
             )
 
 </template>
@@ -330,10 +298,13 @@ export default {
   components: {BarChart},
   data: function () {
     return {
+      labels: [],
+      rates: [],
+      barChart:false,
       selectedMeasurement: '',
-      selectedEntry:'',
-      selectedQuestion:'',
-      filters:{
+      selectedEntry: '',
+      selectedQuestion: '',
+      filters: {
         saltillo: false,
         torreon: true,
         matamoros: false,
@@ -592,7 +563,7 @@ export default {
               score_saltillo: "7.8",
             },
           ],
-          entries:[
+          entries: [
             {
               title: '',
               description: '',
@@ -600,53 +571,59 @@ export default {
             {
               title: 'Sitio Web',
               description: 'El sitio Web es un instrumento de comunicación y de enlace entre cualquier organismo público, y como tal es una plataforma a través de la cual el organismo puede cumplir con altos estándares de transparencia activa.',
-              score_torreon: "8.2",
-              score_matamoros: "6.3",
-              score_saltillo: "9.6",
-              questions:[
+              score_torreon: 8.2,
+              score_matamoros: 6.3,
+              score_saltillo: 9.6,
+              questions: [
                 {
                   title: '',
-                  description:''
+                  description: ''
                 },
                 {
                   title: 'Enlace / URL',
-                  description:'Corresponde al sitio web del OIC'
+                  description: 'Corresponde al sitio web del OIC',
+                  rate_torreon: 8,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
                 },
                 {
                   title: 'Actualización de medios digitales',
-                  description:''
+                  description: '',
+                  rate_torreon: 8,
+                  rate_matamoros: 5,
+                  rate_saltillo: 8,
                 },
                 {
                   title: 'Información por secciones, vinculos o pestañas / Motores de busqueda',
-                  description:''
+                  description: ''
                 },
                 {
                   title: 'Motores de búsqueda',
-                  description:''
+                  description: ''
                 },
                 {
                   title: 'Enlaces hacía sitios de intéres',
-                  description:''
+                  description: ''
                 },
                 {
                   title: 'Instrumentos de intercambio con la ciudadanía',
-                  description:''
+                  description: ''
                 },
                 {
                   title: 'Documentos de auditoría',
-                  description:''
+                  description: ''
                 },
                 {
                   title: 'Información institucional',
-                  description:''
+                  description: ''
                 },
                 {
                   title: 'Documentos de gestión',
-                  description:''
+                  description: ''
                 },
                 {
                   title: 'Descarga de contenido',
-                  description:''
+                  description: ''
                 }
               ]
             },
@@ -656,45 +633,45 @@ export default {
               score_torreon: "6.8",
               score_matamoros: "5.6",
               score_saltillo: "7.8",
-              questions:[
+              questions: [
                 {
                   title: '',
-                  description:''
+                  description: ''
                 },
                 {
-                  title:'Reglamento interior descargable',
+                  title: 'Reglamento interior descargable',
                   description: '',
                 },
                 {
-                  title:'Organigrama de la contraloría',
+                  title: 'Organigrama de la contraloría',
                   description: '',
                 },
                 {
-                  title:'Actividades de la contraloría',
+                  title: 'Actividades de la contraloría',
                   description: '',
                 },
                 {
-                  title:'Contiene el cronograma de auditorías',
+                  title: 'Contiene el cronograma de auditorías',
                   description: '',
                 },
                 {
-                  title:'Informes de las auditorías aplicadas por la contraloría',
+                  title: 'Informes de las auditorías aplicadas por la contraloría',
                   description: '',
                 },
                 {
-                  title:'Descarga los informes de auditoría',
+                  title: 'Descarga los informes de auditoría',
                   description: '',
                 },
                 {
-                  title:'Presupuesto asignado a la contraloría',
+                  title: 'Presupuesto asignado a la contraloría',
                   description: '',
                 },
                 {
-                  title:'Desglosa los bienes y/o servicios contratados por la contraloría',
+                  title: 'Desglosa los bienes y/o servicios contratados por la contraloría',
                   description: '',
                 },
                 {
-                  title:'Descarga la información de servicios',
+                  title: 'Descarga la información de servicios',
                   description: '',
                 },
               ]
@@ -703,7 +680,7 @@ export default {
         },
         participation: {
           title: 'Participación Ciudadana',
-          description:'Se refiere a la dimensión de apertura del OIC para incorporar mecanismos e instancias de cooperación y de articulación que faciliten el ejercicio de un control activo por parte de los ciudadanos y organizaciones de la sociedad civil. Es imprescindible garantizar la participación de la ciudadanía a fin de perfeccionar la calidad del control, y su involucramiento coadyuva a una mayor cultura de transparencia gubernamental.',
+          description: 'Se refiere a la dimensión de apertura del OIC para incorporar mecanismos e instancias de cooperación y de articulación que faciliten el ejercicio de un control activo por parte de los ciudadanos y organizaciones de la sociedad civil. Es imprescindible garantizar la participación de la ciudadanía a fin de perfeccionar la calidad del control, y su involucramiento coadyuva a una mayor cultura de transparencia gubernamental.',
           items: [
             {
               entry: 'Quejas y denuncias',
@@ -978,6 +955,16 @@ export default {
               score_matamoros: "8.25",
               score_saltillo: "8.25",
             },
+          ],
+          entries: [
+            {
+              title: '',
+              description: '',
+            },
+            {
+              title: '',
+              description: '',
+            },
           ]
         }
       },
@@ -997,22 +984,60 @@ export default {
       }
     }
   },
-  methods:{
-    onChangeMeasurement: function(){
+  methods: {
+    onChangeMeasurement: function () {
       this.selectedEntry = '';
       this.selectedQuestion = '';
     },
-    onChangeEntry: function(){
+    onChangeEntry: function () {
       this.selectedQuestion = '';
     },
-    onChangeQuestion: function(){
+    onChangeQuestion: function () {
+      this.updateTable();
+    },
+    updateTable: function () {
+      this.barChart = false;
+      this.$forceUpdate();
+
+      this.$nextTick(function (){
+        let label_torreon = "";
+        let label_matamoros = "";
+        let label_saltillo = "";
+
+        let rate_torreon = 0;
+        let rate_matamoros = 0;
+        let rate_saltillo = 0;
+
+        if(this.filters.torreon){
+          label_torreon = "Torreón";
+          if(this.selectedQuestion.rate_torreon !== undefined){
+            rate_torreon = this.selectedQuestion.rate_torreon;
+          }
+        }
+        if(this.filters.matamoros){
+          label_matamoros = "Matamoros";
+          if(this.selectedQuestion.rate_matamoros !== undefined) {
+            rate_matamoros = this.selectedQuestion.rate_matamoros;
+          }
+        }
+        if(this.filters.saltillo){
+          label_saltillo = "Saltillo";
+          if(this.selectedQuestion.rate_saltillo !== undefined) {
+            rate_saltillo = this.selectedQuestion.rate_saltillo;
+          }
+        }
+
+        this.labels = [label_torreon, label_matamoros, label_saltillo];
+        this.rates = [rate_torreon, rate_matamoros, rate_saltillo];
+
+        this.barChart = true;
+      });
+
+
 
     },
-    updateTable: function (){
-
-    },
-    handlerCity: function (city, data){
-      switch (city){
+    handlerCity: function (city, data) {
+      switch (city) {
         case 'torreon':
           this.filters.torreon = !data;
           break;
@@ -1023,6 +1048,7 @@ export default {
           this.filters.saltillo = !data;
           break;
       }
+
       this.updateTable();
     }
   }

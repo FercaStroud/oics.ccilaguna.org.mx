@@ -2,12 +2,14 @@
 import { Bar } from 'vue-chartjs'
 export default {
   extends: Bar,
+  props:{
+    labels: [],
+    rates: [],
+  },
   data() {
     return {
       chartData: {
-        labels: [
-          "Torreón", "Matamoros", "Saltillo",
-        ],
+        labels: this.labels,
         datasets: [{
           label: 'Calificación',
           borderWidth: 1,
@@ -22,7 +24,7 @@ export default {
             'rgba(0, 71, 134, 1)',
           ],
           pointBorderColor: '#2554FF',
-          data: [12, 19, 3,]
+          data: this.rates
         }]
       },
       options: {
@@ -51,6 +53,7 @@ export default {
   },
   mounted() {
     this.renderChart(this.chartData, this.options)
+    console.log(this.rates, this.labels)
   }
 }
 </script>
