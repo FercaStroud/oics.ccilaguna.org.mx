@@ -51,7 +51,7 @@
           b-col
             .text-left.text-container Filtrar por municipio:
         b-row(align-v="center" style="margin-top:20px")
-          b-col(sm="12" md="4")
+          b-col(sm="4" md="4")
             img(
               @click="handlerCity('torreon', filters.torreon)"
               style="cursor:pointer; width:100%;" src="@/assets/images/mapa_torreon.png"
@@ -73,7 +73,7 @@
               )
               strong(@click="handlerCity('torreon', filters.torreon)" style="font-size:1.2em;") Torreón
 
-          b-col(sm="12" md="4")
+          b-col(sm="4" md="4")
             img(
               @click="handlerCity('matamoros', filters.matamoros)"
               style="cursor:pointer; width:100%;" src="@/assets/images/mapa_matamoros.png"
@@ -95,7 +95,7 @@
               )
               strong(@click="handlerCity('matamoros', filters.matamoros)" style="font-size:1.2em;") Matamoros
 
-          b-col(sm="12" md="4")
+          b-col(sm="4" md="4")
             img(
               @click="handlerCity('saltillo', filters.saltillo)"
               style="cursor:pointer; width:100%;" src="@/assets/images/mapa_saltillo.png"
@@ -247,7 +247,7 @@
                 )
             b-button(block variant="primary" ) Enviar
     //patreons
-    section#patrocinadores.p-5(style="background-color: #f7f7f7;")
+    section#patrocinadores.p-5(style="")
       .container
         b-row(align-v="center" )
           b-col(md="6")
@@ -256,21 +256,23 @@
             .text-left.text-container
               //p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis vehicula tortor.
         b-row(align-v="center" )
-          b-col(md="4" )
+          b-col(md="4" sm="6")
             b-img(
               fluid
               center
               src="@/assets/images/logo.png"
               alt="OICS"
             )
-          b-col(md="4" offset-md="4")
+          b-col(md="4" offset-md="4" sm="6")
             b-img(
               fluid
               center
-              src="@/assets/images/consejo.jpeg"
+              src="@/assets/images/consejo.png"
               alt="Consejo Cívico"
             )
-
+    section#privacy.p-3(style="")
+      .container
+        a(href="/aviso-de-privacidad") Aviso de Privacidad
 </template>
 
 <script>

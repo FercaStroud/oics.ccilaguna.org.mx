@@ -17,6 +17,7 @@
     "hover.css": "^2.3.2",
     "vue": "^2.6.11",
     "vue-chartjs": "^3.5.1",
+    "vue-cookie-law": "^1.13.3",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
   },

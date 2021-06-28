@@ -47,10 +47,10 @@ export default {
 .social-button-container{
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 120px;
   a{
     margin: 10px;
   }
-
+  z-index: 9;
 }
 </style>

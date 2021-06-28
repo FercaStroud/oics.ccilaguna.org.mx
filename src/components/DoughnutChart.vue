@@ -10,10 +10,10 @@ export default {
           datasets: [
             {
               backgroundColor: [
-                '#41B883',
-                '#E46651',
-                '#00D8FF',
-                '#DD1B16'
+                '#fd7ba7',
+                '#de8adf',
+                '#b08ff7',
+                '#fdb75f'
               ],
               data: [25, 25, 25, 25]
             }
