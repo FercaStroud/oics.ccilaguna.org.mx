@@ -9,6 +9,7 @@
           // Right aligned nav items
           b-navbar-nav.ml-auto
             b-nav-item.hvr-underline-from-left(href='#quienes') Proyecto
+            b-nav-item.hvr-underline-from-left(href='#tabla-comparativa') Semáforo
             b-nav-item.hvr-underline-from-left(href='#mediciones') Indicadores
             b-nav-item.hvr-underline-from-left(href='#documentos') Documentos
             b-nav-item.hvr-underline-from-left(href='#contacto') Contacto

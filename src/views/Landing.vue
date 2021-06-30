@@ -2,14 +2,14 @@
   div
     //slider
     b-carousel#inicio(
-      style='text-shadow: 0px 0px 2px #000;margin-top:-100px'
+      style='text-shadow: 0px 0px 2px #000;margin-top:100px'
       indicators=''
     )
       b-carousel-slide(text='' img-src='@/assets/images/banner.jpg')
 
     AboutUs
-    Measurements
     ComparisonTable
+    Measurements
     Documents
     Contact
 
