@@ -31,7 +31,8 @@ export default {
         scales: {
           yAxes: [{
             ticks: {
-              beginAtZero: true
+              beginAtZero: true,
+              max: 10
             },
             gridLines: {
               display: true
@@ -53,7 +54,6 @@ export default {
   },
   mounted() {
     this.renderChart(this.chartData, this.options)
-    console.log(this.rates, this.labels)
   }
 }
 </script>

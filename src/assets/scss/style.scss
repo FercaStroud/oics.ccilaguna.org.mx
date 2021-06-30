@@ -34,21 +34,19 @@ header {
   color: #2c3e50;
 }
 .score-title{
-  position: absolute;
-  top: 30px;
+  position: relative;
   font-size: 1.3em;
 }
 .score-container{
-  position: absolute;
-  top: 50px;
   font-size: 3em;
   font-weight: bolder;
 }
 .municipality-container{
-  position: absolute;
-  bottom: 120px;
   font-size: 2.2em;
   font-weight: lighter;
+}
+.municipality-img{
+  padding: 10px;
 }
 .title {
   font-size: 1.7em;
