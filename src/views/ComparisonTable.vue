@@ -110,8 +110,13 @@
             style="margin-left:10px"
             variant="danger"
             text=" "
-          )
-
+          ).container
+      b-row.mt-3(align-v="center")
+        b-col(md="12")
+        .text-left.text-container(style="font-weight:bolder") Nota aclaratoria
+      b-row(align-v="center")
+        b-col.text-left()
+          p La información cargada en el Tablero de los Órganos Internos de Control municipales está actualizada al mes de junio del año 2021. Es posible que exista un desfase con la información actual si ésta hubiera sido actualizada o modificada por parte del órgano interno de control.
 
 
 </template>

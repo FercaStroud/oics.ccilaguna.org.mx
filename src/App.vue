@@ -7,7 +7,7 @@
     footer(style="position:fixed; bottom:0px;background-color:#f7f7f8; width:100%;")
       b-container
         b-row
-          b-col(md="2" v-if="note")
+          b-col(md="2" )
             b-img(
               fluid
               center
@@ -15,14 +15,9 @@
               alt="OICS"
               style="margin-top:18px"
             )
-          b-col(md="10" v-if="note")
+          b-col(md="10")
             p
             p(style="text-align:justify") La elaboración de este producto ha sido posible gracias al generoso Pueblo de los Estados Unidos de América a través de la Agencia de los Estados Unidos para el Desarrollo Internacional (USAID). El contenido del mismo es responsabilidad del Consejo Cívico de las Instituciones, A.C., y no necesariamente refleja el punto de vista de USAID o del Gobierno de los Estados Unidos.
-          b-col(md="10" v-if="!note")
-            p
-            p(style="text-align:justify") Nota aclaratoria: La información cargada en el Tablero de los Órganos Internos de Control municipales está actualizada al mes de junio del año 2021. Es posible que exista un desfase con la información actual si ésta hubiera sido actualizada o modificada por parte de las instituciones.
-          b-col(md="2" v-if="!note")
-            b-button(@click="note = !note" style="margin-top:18px") Aceptar
 </template>
 
 <style lang="scss">

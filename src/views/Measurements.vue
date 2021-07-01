@@ -137,7 +137,6 @@
             :labels="labels"
             v-if="barChart"
           )
-
 </template>
 
 <script>
@@ -417,6 +416,9 @@ export default {
             {
               title: '',
               description: '',
+              score_torreon: 0,
+              score_matamoros: 0,
+              score_saltillo: 0,
             },
             {
               title: 'Sitio Web',
@@ -445,35 +447,59 @@ export default {
                 },
                 {
                   title: 'Información por secciones, vinculos o pestañas / Motores de busqueda',
-                  description: ''
+                  description: '',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
                 },
                 {
                   title: 'Motores de búsqueda',
-                  description: ''
+                  description: '',
+                  rate_torreon: 5,
+                  rate_matamoros: 5,
+                  rate_saltillo: 8,
                 },
                 {
                   title: 'Enlaces hacía sitios de intéres',
-                  description: ''
+                  description: '',
+                  rate_torreon: 7,
+                  rate_matamoros: 5,
+                  rate_saltillo: 7,
                 },
                 {
                   title: 'Instrumentos de intercambio con la ciudadanía',
-                  description: ''
+                  description: '',
+                  rate_torreon: 8,
+                  rate_matamoros: 5,
+                  rate_saltillo: 8,
                 },
                 {
                   title: 'Documentos de auditoría',
-                  description: ''
+                  description: '',
+                  rate_torreon: 8,
+                  rate_matamoros: 5,
+                  rate_saltillo: 8,
                 },
                 {
                   title: 'Información institucional',
-                  description: ''
+                  description: '',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
                 },
                 {
                   title: 'Documentos de gestión',
-                  description: ''
+                  description: '',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
                 },
                 {
                   title: 'Descarga de contenido',
-                  description: ''
+                  description: '',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
                 }
               ]
             },
@@ -491,38 +517,65 @@ export default {
                 {
                   title: 'Reglamento interior descargable',
                   description: '',
+                  rate_torreon: 10,
+                  rate_matamoros: 9,
+                  rate_saltillo: 10,
                 },
                 {
                   title: 'Organigrama de la contraloría',
                   description: '',
+                  rate_torreon: 10,
+                  rate_matamoros: 8,
+                  rate_saltillo: 5,
                 },
                 {
                   title: 'Actividades de la contraloría',
                   description: '',
+                  rate_torreon: 8,
+                  rate_matamoros: 5,
+                  rate_saltillo: 8,
                 },
                 {
                   title: 'Contiene el cronograma de auditorías',
                   description: '',
+                  rate_torreon: 5,
+                  rate_matamoros: 8,
+                  rate_saltillo: 8,
                 },
                 {
                   title: 'Informes de las auditorías aplicadas por la contraloría',
                   description: '',
+                  rate_torreon: 5,
+                  rate_matamoros: 5,
+                  rate_saltillo: 7,
                 },
                 {
                   title: 'Descarga los informes de auditoría',
                   description: '',
+                  rate_torreon: 5,
+                  rate_matamoros: 5,
+                  rate_saltillo: 5,
                 },
                 {
                   title: 'Presupuesto asignado a la contraloría',
                   description: '',
+                  rate_torreon: 8,
+                  rate_matamoros: 5,
+                  rate_saltillo: 8,
                 },
                 {
                   title: 'Desglosa los bienes y/o servicios contratados por la contraloría',
                   description: '',
+                  rate_torreon: 5,
+                  rate_matamoros: 5,
+                  rate_saltillo: 5,
                 },
                 {
                   title: 'Descarga la información de servicios',
                   description: '',
+                  rate_torreon: 5,
+                  rate_matamoros: 5,
+                  rate_saltillo: 5,
                 },
               ]
             }
@@ -598,7 +651,7 @@ export default {
               score_saltillo: "7",
             },
             {
-              entry: 'Lineamientos del Sistema Estatal Anticorrupción',
+              entry: 'Perfil Contralor',
               question: "Intercambio de informacion entre el SEA y el OIC",
               information_torreon: "",
               information_matamoros: "",
@@ -810,10 +863,794 @@ export default {
             {
               title: '',
               description: '',
+              score_torreon: 0,
+              score_matamoros: 0,
+              score_saltillo: 0,
             },
+            {
+              title: 'Quejas y denuncias',
+              description: '',
+              score_torreon: 8.6,
+              score_matamoros: 7.5,
+              score_saltillo: 10,
+              questions:[
+                {
+                  title: ' ',
+                  description: ' ',
+                  rate_torreon:0,
+                  rate_matamoros: 0,
+                  rate_saltillo: 0,
+                },
+                {
+                  title: 'Actualización quejas/denuncias en el portal del OIC',
+                  description: '',
+                  rate_torreon: 9,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Unidad de Atención para quejas/denuncias',
+                  description: '',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Informe  del estado Procesal de la queja',
+                  description: '',
+                  rate_torreon: 9,
+                  rate_matamoros: 7.5,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Buzón de quejas /denuncia',
+                  description: '',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+              ]
+            },
+            {
+              title: 'Perfil Contralor',
+              description: '',
+              score_torreon: 8.8,
+              score_matamoros: 8.8,
+              score_saltillo: 10,
+              questions:[
+                {
+                  title: ' ',
+                  description: ' ',
+                  rate_torreon:0,
+                  rate_matamoros: 0,
+                  rate_saltillo: 0,
+                },
+                {
+                  title: 'Marco legal para designar al contralor esta homogolado con las reformas federales',
+                  description: '',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Homogeneidad en la designación para ser contalor con el Codigo Municipal y Reglamento Interior',
+                  description: '',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Forma de designación del OIC',
+                  description: '',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Requisitos para el puesto de contralor y curriculum vitae están publicados en la pagina oficial',
+                  description: '',
+                  rate_torreon: 8.8,
+                  rate_matamoros: 8.8,
+                  rate_saltillo: 8.8,
+                },
+              ]
+            },
+            {
+              title: 'Convocatoria pública al cargo de contralor',
+              description: '',
+              score_torreon: 5,
+              score_matamoros: 7,
+              score_saltillo: 5,
+              questions:[
+                {
+                  title: ' ',
+                  description: ' ',
+                  rate_torreon:0,
+                  rate_matamoros: 0,
+                  rate_saltillo: 0,
+                },
+                {
+                  title: 'Marco legal para emitir la convocatoria pública para designar al contralor esta homogolado con las reformas federales',
+                  description: '',
+                  rate_torreon: 5,
+                  rate_matamoros: 5,
+                  rate_saltillo: 5,
+                },
+                {
+                  title: 'Existen lineamientos para emitir y llevar a cabo la convocatoria pública al cargo de contralor ',
+                  description: '',
+                  rate_torreon: 5,
+                  rate_matamoros: 10,
+                  rate_saltillo: 5,
+                },
+                {
+                  title: 'Plataforma digital para emitir la convocatoria pública al cargo de contralor.',
+                  description: '',
+                  rate_torreon: 5,
+                  rate_matamoros: 5,
+                  rate_saltillo: 5,
+                },
+                {
+                  title: 'Intervención directa de la ciudadanía con voz y voto en',
+                  description: '',
+                  rate_torreon: 5,
+                  rate_matamoros: 8,
+                  rate_saltillo: 5,
+                },
+              ]
+            },
+            {
+              title: 'Contraloría Social',
+              description: '',
+              score_torreon: 8.6,
+              score_matamoros: 7.5,
+              score_saltillo: 10,
+              questions:[
+                {
+                  title: ' ',
+                  description: ' ',
+                  rate_torreon:0,
+                  rate_matamoros: 0,
+                  rate_saltillo: 0,
+                },
+                {
+                  title: 'Participación ciudadana en la Contraloría Municipal',
+                  description: '',
+                  rate_torreon: 10,
+                  rate_matamoros: 8,
+                  rate_saltillo: 9,
+                },
+                {
+                  title: 'Mecanismo de participación ciudadana en la Contraloría Municipal',
+                  description: '',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Normatividad para regular la participacion ciudadana en la Contraloria Social',
+                  description: '',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 9,
+                },
+                {
+                  title: 'Participación ciudadana',
+                  description: '',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+              ]
+            },
+
+          ]
+        },
+        accountability: {
+          title: 'Rendición de Cuentas',
+          entries:[
             {
               title: '',
               description: '',
+              score_torreon: 0,
+              score_matamoros: 0,
+              score_saltillo: 0,
+            },
+            {
+              title: 'Servidores Publicos Sancionados',
+              description: '',
+              score_torreon: 7.2,
+              score_matamoros: 6.3,
+              score_saltillo: 7.7,
+              questions:[
+                {
+                  title: '',
+                  description: ' ',
+                  rate_torreon:0,
+                  rate_matamoros: 0,
+                  rate_saltillo: 0,
+                },
+                {
+                  title: 'Periodicidad del registro de servidores públicos sancionados',
+                  description: ' ',
+                  rate_torreon:9,
+                  rate_matamoros: 9,
+                  rate_saltillo: 9,
+                },
+                {
+                  title: '¿Son públicas las denuncias penales, una vez concluidas derivadas de la actuación del OIC?',
+                  description: ' ',
+                  rate_torreon:5,
+                  rate_matamoros: 5,
+                  rate_saltillo: 5,
+                },
+                {
+                  title: 'Contenido del registro de servidores públicos sancionados',
+                  description: ' ',
+                  rate_torreon:7.5,
+                  rate_matamoros: 5,
+                  rate_saltillo: 9,
+                },
+              ]
+            },
+            {
+              title: 'Presupuesto',
+              description: '',
+              score_torreon: 9.2,
+              score_matamoros: 9.2,
+              score_saltillo: 9.2,
+              questions:[
+                {
+                  title: '',
+                  description: ' ',
+                  rate_torreon:0,
+                  rate_matamoros: 0,
+                  rate_saltillo: 0,
+                },
+                {
+                  title: 'Desglose de la clasificación por objeto de gasto (concepto, presupuesto asignado y presupuesto ejercido para el 2020): Servicios personales',
+                  description: ' ',
+                  rate_torreon:9,
+                  rate_matamoros: 9,
+                  rate_saltillo: 9,
+                },
+                {
+                  title: 'Desglose de la clasificación por objeto de gasto (concepto, presupuesto asignado y presupuesto ejercido para el 2020): Materiales y suministros',
+                  description: ' ',
+                  rate_torreon:9,
+                  rate_matamoros: 9,
+                  rate_saltillo: 9,
+                },
+                {
+                  title: 'Desglose de la clasificación por objeto de gasto (concepto, presupuesto asignado y presupuesto ejercido para el 2020):: Servicios Generales',
+                  description: ' ',
+                  rate_torreon:9,
+                  rate_matamoros: 9,
+                  rate_saltillo: 9,
+                },
+                {
+                  title: 'Desglose de la clasificación por objeto de gasto (concepto, presupuesto asignado y presupuesto ejercido para el 2020): Bienes Muebles, Inmuebles e Intangibles',
+                  description: ' ',
+                  rate_torreon:9,
+                  rate_matamoros: 9,
+                  rate_saltillo: 9,
+                },
+                {
+                  title: 'Presupuesto asignado y ejercido',
+                  description: ' ',
+                  rate_torreon:10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+              ]
+            },
+            {
+              title: 'Informes de gestión',
+              description: '',
+              score_torreon: 8.5,
+              score_matamoros: 7.2,
+              score_saltillo: 6.8,
+              questions:[
+                {
+                  title: ' ',
+                  description: ' ',
+                  rate_torreon:0,
+                  rate_matamoros: 0,
+                  rate_saltillo: 0,
+                },
+                {
+                  title: 'Disponibilidad de los informes',
+                  description: ' ',
+                  rate_torreon: 8,
+                  rate_matamoros: 8,
+                  rate_saltillo: 8,
+                },
+                {
+                  title: 'Calidad de los informes',
+                  description: ' ',
+                  rate_torreon: 7,
+                  rate_matamoros: 9,
+                  rate_saltillo: 7,
+                },
+                {
+                  title: 'Presentación pública de los informes de gestión',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 5,
+                },
+                {
+                  title: 'Difusión de los informes de gestión',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 5,
+                },
+                {
+                  title: 'Alcance de la presentación de los informes',
+                  description: ' ',
+                  rate_torreon: 7,
+                  rate_matamoros: 7,
+                  rate_saltillo: 7,
+                },
+              ]
+            },
+            {
+              title: 'Coordinación con otros órganos fiscalizadores Estatales y/o Federales',
+              description: '',
+              score_torreon: 9,
+              score_matamoros: 9,
+              score_saltillo: 9,
+              questions:[
+                {
+                  title: ' ',
+                  description: ' ',
+                  rate_torreon:0,
+                  rate_matamoros: 0,
+                  rate_saltillo: 0,
+                },
+                {
+                  title: 'Periodo de actualización y convenios de coordinacion con otros organos fiscalizadores estatales o federales',
+                  description: ' ',
+                  rate_torreon:10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Firma de convenio de colaboración con otro ente para fiscalizador para el apoyo de sus funciones',
+                  description: ' ',
+                  rate_torreon:10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Funciones que coordinan con otros organos fiscalizadores',
+                  description: ' ',
+                  rate_torreon:8,
+                  rate_matamoros: 8,
+                  rate_saltillo: 8,
+                },
+                {
+                  title: 'El personal del OIC es suficiente',
+                  description: ' ',
+                  rate_torreon:8,
+                  rate_matamoros: 8,
+                  rate_saltillo: 8,
+                },
+              ]
+            },
+            {
+              title: 'Padrón de proveedores y contratistas',
+              description: '',
+              score_torreon: 9.4,
+              score_matamoros: 7.8,
+              score_saltillo: 8.7,
+              questions:[
+                {
+                  title: ' ',
+                  description: ' ',
+                  rate_torreon: 0,
+                  rate_matamoros: 0,
+                  rate_saltillo: 0,
+                },
+                {
+                  title: 'Periodicidad de actualización de Padrón de Proveedores y Contratistas',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 8,
+                  rate_saltillo: 9,
+                },
+                {
+                  title: 'Procedimiento para formar parte del padrón de proveedores y contratistas',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 8,
+                },
+                {
+                  title: 'Actividades llevadas a cabo en la revisión de expedientes.',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 9,
+                },
+                {
+                  title: 'Plazo para llevar a cabo la revisión de expedientes',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Actividades llevadas a cabo para la verificación de empresas locales',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 9,
+                },
+                {
+                  title: 'Plazo para llevar a cabo la verificación de empresas locales',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 8,
+                  rate_saltillo: 9,
+                },
+                {
+                  title: 'Actividades llevadas a cabo para Certificado de Aptitud',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 9,
+                  rate_saltillo:9,
+                },
+                {
+                  title: 'Plazo para llevar la entrega del Certificado de Aptitud',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Base de datos que contenga una cronología de dinámica de provedores',
+                  description: ' ',
+                  rate_torreon: 5,
+                  rate_matamoros: 5,
+                  rate_saltillo: 5,
+                },
+              ]
+            },
+            {
+              title: 'Auditorías',
+              description: '',
+              score_torreon: 8.25,
+              score_matamoros: 5,
+              score_saltillo: 8,
+              questions:[
+                {
+                  title: ' ',
+                  description: ' ',
+                  rate_torreon:0,
+                  rate_matamoros: 0,
+                  rate_saltillo: 0,
+                },
+                {
+                  title: 'Auditorías administrativas',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Auditorías financieras',
+                  description: ' ',
+                  rate_torreon: 8,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Auditorías de obras públicas',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 7,
+                },
+                {
+                  title: 'Auditorias de procedimientos administrativos y licitaciones',
+                  description: ' ',
+                  rate_torreon: 5,
+                  rate_matamoros: 5,
+                  rate_saltillo: 5,
+                },
+              ]
+            },
+            {
+              title: 'Solicitudes de acceso a información al OIC',
+              description: '',
+              score_torreon: 10,
+              score_matamoros: 5,
+              score_saltillo: 10,
+              questions:[
+                {
+                  title: ' ',
+                  description: ' ',
+                  rate_torreon:0,
+                  rate_matamoros: 0,
+                  rate_saltillo: 0,
+                },
+                {
+                  title: 'Número de solicitudes de acceso a información sobre asuntos competentes a la Contraloría Municipal',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Número de solicitudes de acceso a la información con estatus de concluído ',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Número de recursos de revisión interpuestos ',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Número de resoluciones resueltas revocando u ordenando al oic entregue la información',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
+                },
+              ]
+            },
+          ]
+        },
+        performance: {
+          title: 'Rendimiento',
+          entries:[
+            {
+              title: '',
+              description: '',
+              score_torreon: 0,
+              score_matamoros: 0,
+              score_saltillo: 0,
+            },
+            {
+              title: 'Planificación del auditor',
+              description: '',
+              score_torreon: 7.0,
+              score_matamoros: 7.7,
+              score_saltillo: 9.3,
+              questions:[
+                {
+                  title: ' ',
+                  description: ' ',
+                  rate_torreon:0,
+                  rate_matamoros: 0,
+                  rate_saltillo: 0,
+                },
+                {
+                  title: 'Cronograma o calendarización de auditorías',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Manual operativo para realizar las auditorías',
+                  description: ' ',
+                  rate_torreon: 5,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Dónde se publica la calendarización de las auditorías',
+                  description: ' ',
+                  rate_torreon: 6,
+                  rate_matamoros: 8,
+                  rate_saltillo: 8,
+                },
+              ]
+            },
+            {
+              title: 'Gestión del control',
+              description: '',
+              score_torreon: 9.6,
+              score_matamoros: 5.0,
+              score_saltillo: 9.2,
+              questions:[
+                {
+                  title: ' ',
+                  description: ' ',
+                  rate_torreon:0,
+                  rate_matamoros: 0,
+                  rate_saltillo: 0,
+                },
+                {
+                  title: 'Plan de anual de sujetos a auditar',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: '% sujetos de control auditados en un año',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: '% del presupuesto de la administracion publica municipal auditada en un año',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Instancias de monitoreo, Area que da seguimiento',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: '% de las auditorias realizadas en un año que fueron auditorias de seguimiento de otras en las que se identificaron fallas',
+                  description: ' ',
+                  rate_torreon: 8,
+                  rate_matamoros: 5,
+                  rate_saltillo: 6,
+                },
+              ]
+            },
+            {
+              title: 'Calidad de gestión',
+              description: '',
+              score_torreon: 10,
+              score_matamoros: 8.8,
+              score_saltillo: 10,
+              questions:[
+                {
+                  title: ' ',
+                  description: ' ',
+                  rate_torreon:0,
+                  rate_matamoros: 0,
+                  rate_saltillo: 0,
+                },
+                {
+                  title: 'Cursos o capacitaciones del último año se le han impartido al personal de Órgano Inerno de Control',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Periodicidad de capacitación de los servidores públicos adscritos al OIC',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Código de ética del OIC y código de conducta',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Perfil profesional para los servidores públicos adscritos al OIC',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+              ]
+            },
+            {
+              title: 'Política de gestión del personal',
+              description: '',
+              score_torreon: 7.6,
+              score_matamoros: 7,
+              score_saltillo: 7.6,
+              questions:[
+                {
+                  title: ' ',
+                  description: ' ',
+                  rate_torreon:0,
+                  rate_matamoros: 0,
+                  rate_saltillo: 0,
+                },
+                {
+                  title: 'Periodicidad de las convocatorias para adscribir personal al Órgano Interno de Control',
+                  description: ' ',
+                  rate_torreon: 5,
+                  rate_matamoros: 10,
+                  rate_saltillo: 5,
+                },
+                {
+                  title: 'Puestos y fuciones del personal Adscrito al Órgano Interno de Control',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Tipos de contrato del personal del Órgano Interno de Control',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 5,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Servicio profesional de carrera',
+                  description: ' ',
+                  rate_torreon: 5,
+                  rate_matamoros: 5,
+                  rate_saltillo: 5,
+                },
+                {
+                  title: 'Mecanismos formales de la evaluación de gestión',
+                  description: ' ',
+                  rate_torreon: 8,
+                  rate_matamoros: 5,
+                  rate_saltillo: 8,
+                },
+              ]
+            },
+            {
+              title: 'Presupuesto',
+              description: '',
+              score_torreon: 10,
+              score_matamoros: 10,
+              score_saltillo: 10,
+              questions:[
+                {
+                  title: ' ',
+                  description: ' ',
+                  rate_torreon:0,
+                  rate_matamoros: 0,
+                  rate_saltillo: 0,
+                },
+                {
+                  title: 'Porcentaje de presupuesto ejercido en Servicios Personales con respecto al presupuesto total ejercido',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Porcentaje de presupuesto ejercido en Materiales y suministros con respecto al presupuesto total ejercido',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Porcentaje de presupuesto ejercido en Servicios Generales con respecto al presupuesto total ejercido',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Porcentaje del presupuesto en Bienes muebles, Inmuebles e intangibles con respecto al presupuesto total ejercido',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+                {
+                  title: 'Otro',
+                  description: ' ',
+                  rate_torreon: 10,
+                  rate_matamoros: 10,
+                  rate_saltillo: 10,
+                },
+              ]
             },
           ]
         }
@@ -892,5 +1729,5 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
+
