@@ -40,6 +40,7 @@
     section#privacy.p-3(style="")
       .container
         a(href="/aviso-de-privacidad") Aviso de Privacidad
+
 </template>
 
 <script>

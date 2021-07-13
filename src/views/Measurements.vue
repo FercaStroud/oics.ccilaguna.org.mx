@@ -125,12 +125,15 @@
         strong.text-danger Seleccione un municipio para visualizar datos.
       b-row(align-v="center" style="margin-top:20px")
         b-col(sm="12" md="6")
-          strong {{ selectedMeasurement.title }}
-          p {{ selectedMeasurement.description }}
-          strong {{ selectedEntry.title }}
-          p {{ selectedEntry.description }}
-          strong {{ selectedQuestion.title }}
-          p {{ selectedQuestion.description }}
+          p(style="text-align:justify !important;")
+            strong {{ selectedMeasurement.title }}
+          p(style="text-align:justify !important;") {{ selectedMeasurement.description }}
+          p(style="text-align:justify !important;")
+            strong {{ selectedEntry.title }}
+          p(style="text-align:justify !important;") {{ selectedEntry.description }}
+          p(style="text-align:justify !important;")
+            strong {{ selectedQuestion.title }}
+          p(style="text-align:justify !important;") {{ selectedQuestion.description }}
         b-col(sm="12" md="6")
           bar-chart(
             :rates="rates"
@@ -160,7 +163,7 @@ export default {
       },
       measurements: {
         transparency: {
-          title: 'Transparencia y Rendición de Cuentas',
+          title: 'Transparencia y Acceso a la Información',
           description: 'Construir un buen gobierno implica la apertura de su actuación al escrutinio público a través de mecanismos que garanticen a los ciudadanos accesibilidad total al ejercicio de la función pública e impulsen esquemas de corresponsabilidad en la elaboración de políticas públicas encaminadas a la formación de una conducta ética en el funcionamiento administrativo, transparencia en la asignación y el manejo de recursos públicos, así como la rendición de cuentas de acuerdo a las metas establecidas en el corto, mediano y largo plazos. La transparencia hace referencia a la disponibilidad de información a través de la cual el OIC hace visibles y accesibles -de manera suficiente, oportuna, clara y adecuada sus acciones, políticas, procedimientos y decisiones. El acceso a la información representa un componente central de la transparencia de la entidad, pues constituye el primer eslabón en el proceso de apertura de los organismos a la sociedad civil, y es fundamental para posicionarse como instituciones claves y reconocidas públicamente por la calidad de la labor que desempeñan.',
           entries: [
             {
@@ -365,7 +368,7 @@ export default {
                 },
                 {
                   title: 'Unidad de Atención para quejas/denuncias',
-                  description: 'El OIC cuente con un area para atencion de Quejas y Denuncias.',
+                  description: 'El OIC cuente con un área para atención de Quejas y Denuncias.',
                   rate_torreon: 10,
                   rate_matamoros: 10,
                   rate_saltillo: 10,
@@ -379,7 +382,7 @@ export default {
                 },
                 {
                   title: 'Buzón de quejas /denuncia',
-                  description: 'El OIC cuente con un buzon de quejas fisico y virtual.',
+                  description: 'El OIC cuente con un buzón de quejas físico y virtual.',
                   rate_torreon: 10,
                   rate_matamoros: 10,
                   rate_saltillo: 10,
@@ -402,7 +405,7 @@ export default {
                 },
                 {
                   title: 'Marco legal para designar al contralor esta homogolado con las reformas federales',
-                  description: 'Requisitos y forma de designacion del contralor municipal este acorde a la normatividad  federal.',
+                  description: 'Requisitos y forma de designación del contralor municipal este acorde a la normatividad  federal.',
                   rate_torreon: 10,
                   rate_matamoros: 10,
                   rate_saltillo: 10,
@@ -416,7 +419,7 @@ export default {
                 },
                 {
                   title: 'Forma de designación del OIC',
-                  description: 'Procedimiento autonomo para la designacion de contralores municipales.',
+                  description: 'Procedimiento autónomo para la designación de contralores municipales.',
                   rate_torreon: 10,
                   rate_matamoros: 10,
                   rate_saltillo: 10,
@@ -446,21 +449,21 @@ export default {
                 },
                 {
                   title: 'Marco legal para emitir la convocatoria pública para designar al contralor esta homogolado con las reformas federales',
-                  description: 'La convocatoria publica sea independiente imparcial y autónoma.',
+                  description: 'La convocatoria pública sea independiente imparcial y autónoma.',
                   rate_torreon: 5,
                   rate_matamoros: 5,
                   rate_saltillo: 5,
                 },
                 {
                   title: 'Existen lineamientos para emitir y llevar a cabo la convocatoria pública al cargo de contralor ',
-                  description: 'Avance de los municipios sobre lineamientos de la convocatoria publica para designar contralores municipales.',
+                  description: 'Avance de los municipios sobre lineamientos de la convocatoria pública para designar contralores municipales.',
                   rate_torreon: 5,
                   rate_matamoros: 10,
                   rate_saltillo: 5,
                 },
                 {
                   title: 'Plataforma digital para emitir la convocatoria pública al cargo de contralor.',
-                  description: 'Avance de la plataforma digital de la convocatroria publica para designar contralores municipales.',
+                  description: 'Avance de la plataforma digital de la convocatroria pública para designar contralores municipales.',
                   rate_torreon: 5,
                   rate_matamoros: 5,
                   rate_saltillo: 5,
@@ -490,28 +493,28 @@ export default {
                 },
                 {
                   title: 'Participación ciudadana en la Contraloría Municipal',
-                  description: 'Se refiere al grado de intervencion de la ciudadania en las Contralorias Municipales.',
+                  description: 'Se refiere al grado de intervención de la ciudadanía en las Contralorias Municipales.',
                   rate_torreon: 10,
                   rate_matamoros: 8,
                   rate_saltillo: 9,
                 },
                 {
                   title: 'Mecanismo de participación ciudadana en la Contraloría Municipal',
-                  description: 'Se refiere a la forma mediante la cual la ciudadania participa con las Contralorias Municipales.',
+                  description: 'Se refiere a la forma mediante la cual la ciudadanía participa con las Contralorias Municipales.',
                   rate_torreon: 10,
                   rate_matamoros: 10,
                   rate_saltillo: 10,
                 },
                 {
-                  title: 'Normatividad para regular la participacion ciudadana en la Contraloria Social',
-                  description: 'Se refiere a los Reglamentos, manuales, lineamientos que le dan soporte legal a los mecanismos de participacion ciudadana en las contralorias municipales.',
+                  title: 'Normatividad para regular la participación ciudadana en la Contraloria Social',
+                  description: 'Se refiere a los Reglamentos, manuales, lineamientos que le dan soporte legal a los mecanismos de participación ciudadana en las contralorias municipales.',
                   rate_torreon: 10,
                   rate_matamoros: 5,
                   rate_saltillo: 9,
                 },
                 {
                   title: 'Participación ciudadana',
-                  description: '',
+                  description: 'Se refiere a la participación efectiva de la ciudadanía en las contralorias sociales, comités y comisiones',
                   rate_torreon: 10,
                   rate_matamoros: 10,
                   rate_saltillo: 10,
@@ -523,7 +526,7 @@ export default {
         },
         accountability: {
           title: 'Rendición de Cuentas',
-          description: 'Se refiere a los ejercicios mediante los cuales el OIC se responsabiliza de su accionar frente a la ciudadanía -principal beneficiaria de la tarea de control, a través de dispositivos institucionales que permiten dar a conocer intensamente los procedimientos y actividades que desempeña. En particular, la rendición de cuentas comprende la existencia de prácticas y mecanismos a través de los cuales la entidad activamente transparente respecto de su funcionamiento interno, iniciando procedimientos de comunicación con el público yd difundiendo ampliamente sus procesos y resultados.',
+          description: 'Se refiere a los ejercicios mediante los cuales el OIC se responsabiliza de su accionar frente a la ciudadanía principal beneficiaria de la tarea de control, a través de dispositivos institucionales que permiten dar a conocer intensamente los procedimientos y actividades que desempeña. En particular, la rendición de cuentas comprende la existencia de prácticas y mecanismos a través de los cuales la entidad activamente transparente respecto de su funcionamiento interno, iniciando procedimientos de comunicación con el público y difundiendo ampliamente sus procesos y resultados.',
           entries:[
             {
               title: '',
@@ -533,7 +536,7 @@ export default {
               score_saltillo: 0,
             },
             {
-              title: 'Servidores Publicos Sancionados',
+              title: 'Servidores Públicos Sancionados',
               description: 'Es el promedio ponderado de las denuncias penales interpuestas por denuncias emitidas contra servidores públicos.',
               score_torreon: 7.2,
               score_matamoros: 6.3,
@@ -796,7 +799,7 @@ export default {
             },
             {
               title: 'Auditorías',
-              description: 'Auditorías bajo las siguientes categorías: Auditorias Administrativas, Auditoria financieras, Auditorias de procedimientos administrativos y licitaciones.',
+              description: 'Auditorías bajo las siguientes categorías: Auditorias Administrativas, Auditorias financieras, Auditorias de procedimientos administrativos y licitaciones.',
               score_torreon: 8.25,
               score_matamoros: 5,
               score_saltillo: 8,
@@ -961,7 +964,7 @@ export default {
                   rate_saltillo: 10,
                 },
                 {
-                  title: '% del presupuesto de la administracion publica municipal auditada en un año',
+                  title: '% del presupuesto de la administracion pública municipal auditada en un año',
                   description: 'Es la el porcentaje de auditorías que realizó en el año corriente.',
                   rate_torreon: 10,
                   rate_matamoros: 5,
@@ -999,28 +1002,28 @@ export default {
                 },
                 {
                   title: 'Cursos o capacitaciones del último año se le han impartido al personal de Órgano Inerno de Control',
-                  description: 'Se refiere a la capacitacion y profesionalizacion de los servidores publicos adscritos a las contralorias municipales.',
+                  description: 'Se refiere a la capacitacion y profesionalizacion de los servidores públicos adscritos a las contralorias municipales.',
                   rate_torreon: 10,
                   rate_matamoros: 10,
                   rate_saltillo: 10,
                 },
                 {
                   title: 'Periodicidad de capacitación de los servidores públicos adscritos al OIC',
-                  description: 'Se refiere a la capacitacion y profesionalizacion de los servidores publicos adscritos a las contralorias municipales de manera continua.',
+                  description: 'Se refiere a la capacitacion y profesionalizacion de los servidores públicos adscritos a las contralorias municipales de manera continua.',
                   rate_torreon: 10,
                   rate_matamoros: 10,
                   rate_saltillo: 10,
                 },
                 {
                   title: 'Código de ética del OIC y código de conducta',
-                  description: 'Normatividad del OIC para sus servidores publicos.',
+                  description: 'Normatividad del OIC para sus servidores públicos.',
                   rate_torreon: 10,
                   rate_matamoros: 5,
                   rate_saltillo: 10,
                 },
                 {
                   title: 'Perfil profesional para los servidores públicos adscritos al OIC',
-                  description: 'Se refiere al perfil y curriculum de los servidores publicos adscritos a la contraloria municipal.',
+                  description: 'Se refiere al perfil y curriculum de los servidores públicos adscritos a la contraloria municipal.',
                   rate_torreon: 10,
                   rate_matamoros: 10,
                   rate_saltillo: 10,
@@ -1049,7 +1052,7 @@ export default {
                   rate_saltillo: 5,
                 },
                 {
-                  title: 'Puestos y fuciones del personal Adscrito al Órgano Interno de Control',
+                  title: 'Puestos y funciones del personal Adscrito al Órgano Interno de Control',
                   description: 'Organigrama de las contralorias municipales.',
                   rate_torreon: 10,
                   rate_matamoros: 10,
@@ -1064,7 +1067,7 @@ export default {
                 },
                 {
                   title: 'Servicio profesional de carrera',
-                  description: 'implementacion del Servicio Profesional de Carrera.',
+                  description: 'implementación del Servicio Profesional de Carrera.',
                   rate_torreon: 5,
                   rate_matamoros: 5,
                   rate_saltillo: 5,

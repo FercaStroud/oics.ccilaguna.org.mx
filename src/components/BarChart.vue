@@ -28,6 +28,13 @@ export default {
         }]
       },
       options: {
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              return "Ver más detalles en Documentos";
+            }
+          }
+        },
         scales: {
           yAxes: [{
             ticks: {

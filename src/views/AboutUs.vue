@@ -22,7 +22,14 @@
           doughnut-chart(
             v-on:updateTextInDoughnut="updateTextInDoughnut"
           )
-        b-col(md="6")
+        b-col(md="6" v-if="textInDoughnut.title === ''")
+          b-img.hideinsm(
+            fluid
+            center
+            src="@/assets/images/click.png"
+            alt="OICS"
+          )
+        b-col(md="6" v-if="textInDoughnut.title !== ''")
           p(style="text-align:left !important;")
             strong {{ textInDoughnut.title }}
           p(style="text-align:justify !important;") {{ textInDoughnut.description }}
@@ -30,7 +37,7 @@
         b-col(md="12")
           .text-left.text-container
             br/
-            p(style="text-align:justify !important;") La independencia de la entidad resulta una precondición para cumplir con su Misión y alcanzar sus objetivos, pues de ello se deriva el nivel de autonomía del que dispondrá para administrar su labor y desarrollar sus funciones.
+            p(style="text-align:justify !important;") La independencia de la entidad resulta una precondición para cumplir con su misión y alcanzar sus objetivos, pues de ello se deriva el nivel de autonomía del que dispondrá para administrar su labor y desarrollar sus funciones.
 </template>
 
 <script>
@@ -50,7 +57,7 @@ export default {
         case 0:
           this.textInDoughnut = {
             title: 'TRANSPARENCIA Y ACCESO A LA INFORMACIÓN',
-            description: 'Construir un buen gobierno implica la apertura de su actuación al escrutinio público a través de mecanismos que garanticen a los ciudadanos accesibilidad total al ejercicio de la función pública e impulsen esquemas de corresponsabilidad en la elaboración de políticas públicas encaminadas a la formación de una conducta ética en el funcionamiento administrativo, transparencia en la asignación y el manejo de recursos públicos, así como la rendición de cuentas de acuerdo a las metas establecidas en el corto,mediano y largo plazos. La transparencia hace referencia a la disponibilidad de información a través de la cual el OIC hace visibles y accesibles -de manera suficiente, oportuna, clara y adecuada- sus acciones, políticas, procedimientos y decisiones.',
+            description: 'Construir un buen gobierno implica la apertura de su actuación al escrutinio público a través de mecanismos que garanticen a los ciudadanos accesibilidad total al ejercicio de la función pública e impulsen esquemas de corresponsabilidad en la elaboración de políticas públicas encaminadas a la formación de una conducta ética en el funcionamiento administrativo, transparencia en la asignación y el manejo de recursos públicos, así como la rendición de cuentas de acuerdo a las metas establecidas en el corto, mediano y largo plazos. La transparencia hace referencia a la disponibilidad de información a través de la cual el OIC hace visibles y accesibles de manera suficiente, oportuna, clara y adecuada sus acciones políticas, procedimientos y decisiones.',
           }
           break;
         case 1:
@@ -62,7 +69,7 @@ export default {
         case 2:
           this.textInDoughnut = {
             title: 'RENDICIÓN DE CUENTAS',
-            description: 'Se refiere a los ejercicios mediante los cuales el OIC se responsabiliza de su accionar frente a la ciudadanía -principal beneficiaria de la tarea de control- a través de dispositivos institucionales que permiten dar a conocer intensamente los procedimientos y actividades que desempeña. En particular, la rendición de cuentas comprende la existencia de prácticas y mecanismos a través de los cuales las entidades son activamente transparentes respecto de su funcionamiento interno, iniciando procedimientos de comunicación con el público y difundiendo ampliamente sus procesos y resultados.',
+            description: 'Se refiere a los ejercicios mediante los cuales el OIC se responsabiliza de su accionar frente a la ciudadanía principal beneficiaria de la tarea de control a través de dispositivos institucionales que permiten dar a conocer intensamente los procedimientos y actividades que desempeña. En particular, la rendición de cuentas comprende la existencia de prácticas y mecanismos a través de los cuales las entidades son activamente transparentes respecto de su funcionamiento interno, iniciando procedimientos de comunicación con el público y difundiendo ampliamente sus procesos y resultados.',
           }
           break;
         case 3:
@@ -79,5 +86,9 @@ export default {
 </script>
 
 <style scoped>
-
+@media (max-width: 991px) {
+  .hideinsm{
+    display: none;
+  }
+}
 </style>
