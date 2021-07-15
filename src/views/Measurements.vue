@@ -574,7 +574,7 @@ export default {
             },
             {
               title: 'Presupuesto',
-              description: 'Consiste en el uso correcto y transparente de los recursos públicos asignados anualmente a los Órganos Internos de Control.',
+              description: 'Se analiza en función del porcentaje de participación por objeto de gasto en el presupuesto total ejercido.',
               score_torreon: 9.2,
               score_matamoros: 9.2,
               score_saltillo: 9.2,
