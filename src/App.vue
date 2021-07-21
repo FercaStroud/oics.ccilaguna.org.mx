@@ -40,7 +40,7 @@ export default {
   components: {FloatingSocialIcons, Navigator, CookieLaw},
   data: function () {
     return {
-      note: true
+      note: false
     }
   }
 }
