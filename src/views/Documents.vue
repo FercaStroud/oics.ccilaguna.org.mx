@@ -38,13 +38,18 @@ export default {
         items: [
           {
             title: 'Documento 1',
-            text: 'Diagnóstico y recomendaciones sobre el funcionamiento de la Contraloría Municipal de Matamoros',
-            href: 'https://oics.ccilaguna.org.mx/documento_uno.pdf'
+            text: 'Diagnóstico y recomendaciones SOBRE EL FUNCIONAMIENTO DE LA Contraloría Municipal DE MATAMOROS, COAHUILA',
+            href: 'https://oics.ccilaguna.org.mx/MATAMOROS.pdf'
           },
           {
             title: 'Documento 2',
-            text: 'Diagnóstico y recomendaciones sobre el funcionamiento de la Contraloría Municipal de Saltillo',
-            href: 'https://oics.ccilaguna.org.mx/documento_dos.pdf'
+            text: 'Diagnóstico y recomendaciones SOBRE EL FUNCIONAMIENTO DE LA Contraloría Municipal DE SALTILLO, COAHUILA',
+            href: 'https://oics.ccilaguna.org.mx/SALTILLO.pdf'
+          },
+          {
+            title: 'Documento 3',
+            text: 'Diagnóstico y recomendaciones SOBRE EL FUNCIONAMIENTO DE LA Contraloría Municipal DE TORREÓN, COAHUILA',
+            href: 'https://oics.ccilaguna.org.mx/TORREON.pdf'
           },
         ]
       }

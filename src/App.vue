@@ -4,8 +4,8 @@
     router-view
     FloatingSocialIcons
     div(style="height:120px")
-      a(@click="note=true" style="cursor:pointer") Ver Disclaimer
-    footer(v-if="note" style="position:fixed; bottom:0px;background-color:#ECECEC; width:100%;")
+      a(@click="showDisclaimer" style="cursor:pointer") Ver Disclaimer
+    div(v-if="note" style="position:fixed; bottom:0px;background-color:#ECECEC; width:100%;")
       b-container
         b-row
           b-col(md="2" )
@@ -41,6 +41,12 @@ export default {
   data: function () {
     return {
       note: false
+    }
+  },
+  methods:{
+    showDisclaimer: function(){
+      this.note = true;
+      console.log("hola")
     }
   }
 }
