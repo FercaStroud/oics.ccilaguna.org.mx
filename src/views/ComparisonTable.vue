@@ -138,7 +138,7 @@ export default {
           matamoros_diciembre_2021: null,
           matamoros_junio_2022: null,
 
-          saltillo_junio_2021: 7.9,
+          saltillo_junio_2021: 8.1,
           saltillo_diciembre_2021: null,
           saltillo_junio_2022: null,
         },
@@ -148,7 +148,7 @@ export default {
           saltillo_diciembre_2021: null,
           saltillo_junio_2022: null,
 
-          torreon_junio_2021: 8.7,
+          torreon_junio_2021: 7.8,
           torreon_diciembre_2021: null,
           torreon_junio_2022: null,
 
@@ -159,15 +159,15 @@ export default {
         },
         {
           eje: 'Rendición de Cuentas',
-          saltillo_junio_2021: 7.9,
+          saltillo_junio_2021: 8.9,
           saltillo_diciembre_2021: null,
           saltillo_junio_2022: null,
 
-          torreon_junio_2021: 8.2,
+          torreon_junio_2021: 9,
           torreon_diciembre_2021: null,
           torreon_junio_2022: null,
 
-          matamoros_junio_2021: 6.6,
+          matamoros_junio_2021: 7.2,
           matamoros_diciembre_2021: null,
           matamoros_junio_2022: null,
 

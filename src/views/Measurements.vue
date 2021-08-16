@@ -261,7 +261,7 @@ export default {
               description: 'La información relevante de la entidad hace referencia a datos y contenidos informativos sobre la identidad de la institución fiscalizadora y su funcionamiento interno.',
               score_torreon: 6.8,
               score_matamoros: 6.1,
-              score_saltillo: 6.8,
+              score_saltillo: 7.3,
               questions: [
                 {
                   title: '',
@@ -279,7 +279,7 @@ export default {
                   description: 'Es posible conocer el organigrama de la organización.',
                   rate_torreon: 10,
                   rate_matamoros: 8,
-                  rate_saltillo: 5,
+                  rate_saltillo: 10,
                 },
                 {
                   title: 'Actividades de la contraloría',
@@ -392,7 +392,7 @@ export default {
             {
               title: 'Perfil Contralor',
               description: 'Son las características autónomas que presenta el Contralor con respecto al gobierno Municipal.',
-              score_torreon: 8.8,
+              score_torreon: 7.5,
               score_matamoros: 8.8,
               score_saltillo: 10,
               questions:[
@@ -481,7 +481,7 @@ export default {
               title: 'Contraloría Social',
               description: 'Son las actividades, planes y proyectos que mantiene el Órgano de Control Interno con la sociedad civil',
               score_torreon: 10,
-              score_matamoros: 8.25,
+              score_matamoros: 8.2,
               score_saltillo: 9.5,
               questions:[
                 {
@@ -627,8 +627,8 @@ export default {
               title: 'Informes de gestión',
               description: 'La elaboración de informes de gestión constituye un ejercicio integral de rendición de cuentas que realiza la entidad fiscalizadora, y se analiza en función de: 1) la disponibilidad de dichos informes para el público acceso, 2) la calidad de la información presentada, y 3) el grado de institucionalización de la práctica. Asimismo, puesto que un ejercicio activo de rendición de cuentas por parte de la entidad no comprende solamente la elaboración de informes de gestión, también se considera: 4) la existencia de instancias en las que los mismos se presentan y/o difunden ante una amplia gama de actores.',
               score_torreon: 8.5,
-              score_matamoros: 7.2,
-              score_saltillo: 6.8,
+              score_matamoros: 7,
+              score_saltillo: 8.3,
               questions:[
                 {
                   title: ' ',
@@ -656,14 +656,14 @@ export default {
                   description: 'Existencia de la apertura del OIC en la participación de una variedad de actores como destinatarios de los informes de gestión que realiza.',
                   rate_torreon: 10,
                   rate_matamoros: 5,
-                  rate_saltillo: 5,
+                  rate_saltillo: 10,
                 },
                 {
                   title: 'Difusión de los informes de gestión',
                   description: 'Existencia de la difusión de informes de gestión.',
                   rate_torreon: 10,
                   rate_matamoros: 5,
-                  rate_saltillo: 5,
+                  rate_saltillo: 10,
                 },
                 {
                   title: 'Alcance de la presentación de los informes',
@@ -723,7 +723,7 @@ export default {
               description: 'Es la base de datos actualizada de los proveedores que mantienen un vínculo con el Ayuntamiento.',
               score_torreon: 9.4,
               score_matamoros: 7.8,
-              score_saltillo: 8.7,
+              score_saltillo: 9.4,
               questions:[
                 {
                   title: ' ',
@@ -737,21 +737,21 @@ export default {
                   description: 'Frecuencia en la lista del Padrón de Proveedores y Contratistas.',
                   rate_torreon: 10,
                   rate_matamoros: 8,
-                  rate_saltillo: 9,
+                  rate_saltillo: 10,
                 },
                 {
                   title: 'Procedimiento para formar parte del padrón de proveedores y contratistas',
                   description: 'Requisitos establecidos para formar parte del Padrón de Proveedores y Contratistas.',
                   rate_torreon: 10,
                   rate_matamoros: 10,
-                  rate_saltillo: 8,
+                  rate_saltillo: 10,
                 },
                 {
                   title: 'Actividades llevadas a cabo en la revisión de expedientes.',
                   description: 'Procedimientos establecidos por parte del OIC para llevar a cabo la revisión de expedientes.',
                   rate_torreon: 10,
                   rate_matamoros: 5,
-                  rate_saltillo: 9,
+                  rate_saltillo: 10,
                 },
                 {
                   title: 'Plazo para llevar a cabo la revisión de expedientes',
@@ -765,21 +765,21 @@ export default {
                   description: 'Procedimientos establecidos por parte del OIC para llevar a cabo la verificación de empresas locales.',
                   rate_torreon: 10,
                   rate_matamoros: 5,
-                  rate_saltillo: 9,
+                  rate_saltillo: 10,
                 },
                 {
                   title: 'Plazo para llevar a cabo la verificación de empresas locales',
                   description: 'Existencia de un plazo máximo establecido para la verificación de empresas locales.',
                   rate_torreon: 10,
                   rate_matamoros: 8,
-                  rate_saltillo: 9,
+                  rate_saltillo: 10,
                 },
                 {
                   title: 'Actividades llevadas a cabo para Certificado de Aptitud',
                   description: 'Procedimientos establecidos por parte del OIC para la entrega del Certificado de Aptitud.',
                   rate_torreon: 10,
                   rate_matamoros: 9,
-                  rate_saltillo:9,
+                  rate_saltillo:10,
                 },
                 {
                   title: 'Plazo para llevar la entrega del Certificado de Aptitud',
@@ -802,7 +802,7 @@ export default {
               description: 'Auditorías bajo las siguientes categorías: Auditorias Administrativas, Auditorias financieras, Auditorias de procedimientos administrativos y licitaciones.',
               score_torreon: 8.25,
               score_matamoros: 5,
-              score_saltillo: 8,
+              score_saltillo: 8.2,
               questions:[
                 {
                   title: ' ',
